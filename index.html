@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9seebird</title>
+
+<script>
+  /* ============================================================
+     주소가 바뀌면 아래 TARGET 한 줄만 고치고 커밋하면 끝입니다.
+     예) "https://9seebird.me/"  "https://bonse.dev/"
+     ============================================================ */
+  const TARGET = "https://9seebird.tech/";
+
+  location.replace(TARGET);
+</script>
+
+<noscript>
+  <!-- 자바스크립트가 꺼진 브라우저용 예비 경로. 위 TARGET과 같은 주소로 맞춰두세요. -->
+  <meta http-equiv="refresh" content="0; url=https://9seebird.tech/">
+</noscript>
+
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Pretendard, sans-serif;
+    background: #f4f4f3; color: #191f28;
+  }
+  @media (prefers-color-scheme: dark) { body { background:#111417; color:#e8eaed; } }
+  .box { text-align: center; padding: 24px; }
+  .name { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+  .msg  { margin-top: 10px; color: #8b95a1; font-size: 14px; }
+  a { color: #2563eb; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="name">9seebird</div>
+    <div class="msg">이동 중입니다… 자동으로 넘어가지 않으면
+      <a id="link" href="https://9seebird.tech/">여기를 눌러주세요</a>.
+    </div>
+  </div>
+  <script>document.getElementById("link").href = TARGET;</script>
+</body>
+</html>
